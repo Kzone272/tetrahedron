@@ -97,7 +97,7 @@ int main() {
 
   Geometry tetra = tetrahedron();
 
-  const int steps = 4;
+  const int steps = 2;
   iter(tetra, steps);
 
   // The string formatting below was based on the Three.js library, which allowed
