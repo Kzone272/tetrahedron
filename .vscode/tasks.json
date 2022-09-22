@@ -5,10 +5,7 @@
       "shell": {
         "executable": "cmd.exe",
         "args": [
-          "/C",
-          // The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
-          "\"C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/Tools/VsDevCmd.bat\"",
-          "&&"
+          "/c", "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\"", "&&"
         ]
       }
     }
@@ -33,5 +30,25 @@
         "isDefault": true
       }
     },
+    {
+      "type": "shell",
+      "label": "ninja clean default",
+      "command": "ninja",
+      "args": [
+        "clean",
+        "-C",
+        "out/default"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$msCompile"
+      ],
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      }
+    }
   ]
 }
